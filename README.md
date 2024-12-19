@@ -30,3 +30,16 @@ This Repo is your blueprint for leveraging AWS services like ECR, S3, DynamoDB, 
 To make learning even easier, a detailed YouTube video accompanies this guide, walking you through each step visually. Whether you're a DevOps enthusiast or a seasoned cloud professional, this tutorial will help you bridge the gap between theory and practical implementation.
 
 
+####################################lian-project#####################
+
+ -Dsonar.projectKey=frontend \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=http://13.201.123.213:9000 \
+  -Dsonar.login=sqp_075763c479969309c97fc0e2a94eafe946d01a76
+################################sonar-token#######################
+  squ_0df701df765d2eb0c8a4e59ca942078e48b20914
+
+ 
+
+  ################################argo-cd#############################
+  3q0DxCkZ6A44KC0k

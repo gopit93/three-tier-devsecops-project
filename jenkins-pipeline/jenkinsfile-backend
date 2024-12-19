@@ -8,7 +8,7 @@ pipeline {
         SCANNER_HOME=tool 'sonar-scanner'
         AWS_ACCOUNT_ID = credentials('ACCOUNT_ID')
         AWS_ECR_REPO_NAME = credentials('ECR_REPO_BACKEND')
-        AWS_DEFAULT_REGION = 'us-west-2'
+        AWS_DEFAULT_REGION = 'ap-south-1'
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/"
     }
     stages {
@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', credentialsId: 'GITHUB', url: 'https://github.com/codewithmuh/three-tier-devsecops-project.git'
+                git branch: 'main', credentialsId: 'GITHUB', url: 'https://github.com/gopit93/three-tier-devsecops-project.git'
             }
         }
         stage('Sonarqube Analysis') {
@@ -30,8 +30,8 @@ pipeline {
                             $SCANNER_HOME/bin/sonar-scanner \
                             -Dsonar.projectKey=backend \
                             -Dsonar.sources=. \
-                            -Dsonar.host.url=http://44.244.210.204:9000 \
-                            -Dsonar.login=sqp_5940b2eeea33d0e4f873243a7a1f988ab74dd112
+                            -Dsonar.host.url=http://13.201.123.213:9000 \
+                            -Dsonar.login=sqp_eace6f96f0be36ba4a03e7dca99a0d4e63d978cf
                         '''
                     }
                 }
